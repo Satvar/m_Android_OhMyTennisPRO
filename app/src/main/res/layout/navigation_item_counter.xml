@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ns_menu_row"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/navigation_items"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/listvisible"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        
+        <ImageView
+            android:id="@+id/icon"
+            android:tint="#FF3E00"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/clear"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"/>
+        <!--android:layout_toRightOf="@+id/icon"-->
+
+        <TextView
+            android:layout_toRightOf="@+id/icon"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"                        
+            android:text="@string/app_name" />
+        
+        <TextView
+            android:layout_marginRight="15dp"
+            android:id="@+id/counter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle_counter"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_seprate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+
+        <View
+            android:id="@+id/viewNavigation"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/line_seprate"
+            android:background="#F44336" />
+        
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+        android:background="@color/gray" />
+
+</LinearLayout>

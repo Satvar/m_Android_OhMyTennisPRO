@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.forgot.ForgotActivity">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/login_logo_left_right"
+            android:layout_marginRight="@dimen/login_logo_left_right"
+            android:layout_marginTop="60sp"
+            android:layout_marginBottom="30dp"
+            android:layout_height="75sp"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+
+            android:gravity="center"
+            android:text="Mot de passe oublié"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:text="Saisissez votre adresse e-mail associée à votre compte OhMyTennis et recevez un lien pour réinitialiser votre mot de passe."/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/login_logo_left_right"
+                    android:layout_marginRight="@dimen/login_logo_left_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/r_email_icon"
+                            android:layout_marginTop="-5dp"
+                            android:src="@drawable/ic_email_black_24dp"
+                            android:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp" />
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16sp"
+                                android:textColor="#000000"
+
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="-6dp"
+                                android:text="@string/email_id_hint"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/star"
+                                android:textColor="@color/redcolor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <EditText
+                                android:textSize="15sp"
+                                android:inputType="textEmailAddress"
+                                android:textColor="#000000"
+                                android:id="@+id/f_user_id"
+                                android:hint="@string/email_id_hint_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/colorPrimary"
+
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                            <!--<LinearLayout-->
+                    <!--android:layout_marginTop="-4dp"-->
+                    <!--android:background="@color/linthint"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="2.5dp"/>-->
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/redcolor"
+                        android:id="@+id/f_user_id_error">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/redcolor"
+                        android:text="@string/star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Champs obligatoires"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:textAllCaps="true"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:id="@+id/f_cancel"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/whitecolor"
+                        android:layout_marginLeft="@dimen/login_logo_left_right"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/cancel"
+
+                        android:background="@drawable/cancelbutton"
+                        />
+                    <Button
+                        android:textAllCaps="true"
+                        android:id="@+id/f_find"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/whitecolor"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="@dimen/login_logo_left_right"
+                        android:text="Envoyer"
+
+                        android:background="@drawable/loginbutton"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="@string/done"/>
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:id="@+id/gofloginid"
+                android:text="@string/register"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/reverse_parent_layout"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:visibility="gone"
+        android:paddingRight="5dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/cell_shape"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/blackcolor"
+            android:text="Status :  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/reserve_heading"
+        android:textColor="@color/blackcolor"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_alignLeft="@+id/reserve_status"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/reserve_name"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_alignParentRight="true"
+            android:textColor="@color/whitecolor"
+            android:padding="3dp"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:id="@+id/reserve_status"
+            android:layout_width="180dp"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+<LinearLayout
+    android:visibility="visible"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:padding="5dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_date_black_24dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    <TextView
+        android:id="@+id/reserve_date"
+        android:layout_marginLeft="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:padding="5dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/time_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:id="@+id/reserve_time"
+            android:layout_marginLeft="3dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:text="Temps &amp; Date :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/reserve_cancel"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/cancelbutton"
+            android:backgroundTint="@color/button_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/whitecolor"
+            android:text="@string/cancel"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <Button
+            android:id="@+id/reserve_modify"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/cancelbutton"
+            android:textAllCaps="true"
+            android:backgroundTint="#17a2b8"
+            android:textColor="@color/whitecolor"
+            android:text="Replanifier"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <Button
+            android:id="@+id/reserve_accept"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/cancelbutton"
+            android:textAllCaps="true"
+            android:backgroundTint="@color/colorGoogleGreen"
+            android:textColor="@color/whitecolor"
+            android:text="ACCEPTER"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="#E7E7E7"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+</LinearLayout>

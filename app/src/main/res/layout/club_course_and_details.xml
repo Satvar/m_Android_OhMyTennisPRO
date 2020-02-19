@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="2dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:elevation="5dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:elevation="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<com.google.android.material.textfield.TextInputLayout-->
+                <!--android:background="@color/whitecolor"-->
+                <!--android:layout_margin="1dp"-->
+                <!--android:layout_weight="1"-->
+                <!--app:hintEnabled="true"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<com.google.android.material.textfield.TextInputEditText-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:hint="course"-->
+                    <!--android:text="dddddddd"-->
+                    <!--android:backgroundTint="@color/whitecolor"-->
+                    <!--android:id="@+id/club_dialog_course_name"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" />-->
+            <!--</com.google.android.material.textfield.TextInputLayout>-->
+        <TextView
+            android:id="@+id/club_dialog_course_name"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeTextType="uniform"
+            android:textStyle="bold"
+            android:textColor="@color/blackcolor"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="dddd"
+            android:layout_margin="1dp"
+            android:background="@color/whitecolor"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/club_dialog_course_day"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/blackcolor"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="dddd"
+            android:layout_margin="1dp"
+            android:background="@color/whitecolor"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/whitecolor"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/club_course_details_show_hide"
+            android:textColor="@color/whitecolor"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/attach"
+            android:text="PLUS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/club_course_details_show"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/button_cancel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="0.5dp"
+            android:background="@color/whitecolor"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:text="Heure de début"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="0.5dp"
+            android:background="@color/whitecolor"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:text="Heure de fin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="0.5dp"
+            android:background="@color/whitecolor"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:text="Compte Max"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="0.5dp"
+            android:background="@color/whitecolor"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:text="Prix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="0.5dp"
+            android:background="@color/whitecolor"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="@color/colorGoogleYellow"
+                android:text="Action"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/club_course_details_recycl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

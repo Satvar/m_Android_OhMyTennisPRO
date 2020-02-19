@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group >
+        <item
+            android:id="@+id/nav_home"
+            android:title="Tableaus de board" />
+        <item
+            android:id="@+id/nav_my_account"
+            android:title="Mon compte"/>
+        <item
+            android:id="@+id/nav_calenderpage"
+            android:title="Mon calenderier"/>
+        <item
+            android:id="@+id/nav_resevation"
+            android:title="Réservation" />
+        <item
+            android:id="@+id/nav_service"
+            android:title="Prestations de services"/>
+        <item
+            android:id="@+id/nav_indi_course"
+            android:title="\t\tCours individuel"/>
+        <item
+        android:id="@+id/nav_cours_collectif"
+        android:title="\t\tCours collectif" />
+        <item
+        android:id="@+id/nav_cour_collectif_club"
+        android:title="\t\tCour collectif club" />
+
+            <item
+                android:id="@+id/nav_teambuilding"
+                android:title="\t\tTeambuilding" />
+            <item
+                android:id="@+id/nav_animation"
+                android:title="\t\tAnimation" />
+            <item
+                android:id="@+id/nav_tournoi"
+                android:title="\t\tTournoi" />
+        <item
+            android:id="@+id/nav_change_pass"
+            android:title="Changer le mot de passe" />
+        <item
+            android:id="@+id/nav_tools2"
+            android:title="Se déconnecter" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_share"-->
+    <!--android:icon="@drawable/ic_menu_share"-->
+    <!--android:title="@string/home_tittle" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_send"-->
+    <!--android:icon="@drawable/ic_menu_send"-->
+    <!--android:title="@string/home_tittle" />-->
+    <!--</menu>-->
+    <!--</item>-->
+
+</menu>

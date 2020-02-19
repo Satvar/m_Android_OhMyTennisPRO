@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EBEBEB"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.coachuserreservation.CoachUserReservation">
+    <androidx.appcompat.widget.Toolbar
+        android:visibility="gone"
+        android:id="@+id/toolbar_indi"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back"
+            android:src="@drawable/back_icon"
+            android:tint="@color/whitecolor"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="left"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+
+            android:textColor="@color/whitecolor"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:text="Mes réservations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="20dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginRight="5dp"
+                android:textColor="@color/blackcolor"
+                android:textSize="16sp"
+                android:text="Filtre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.tech.cloudnausor.ohmytennispro.utils.MyAutoCompleteTextView
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:backgroundTint="#ebebeb"
+                android:background="@drawable/onlybuttonbordermodifiy"
+                android:id="@+id/reserve_filter"
+                android:text="Toute"
+                android:textSize="15sp"
+                android:inputType="textNoSuggestions"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:focusable="false"
+                android:drawableRight="@drawable/ic_spinner_arrow_down_black_24dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="20dp"
+            android:id="@+id/reserve_cycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

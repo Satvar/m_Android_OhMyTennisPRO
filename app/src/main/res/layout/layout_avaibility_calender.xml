@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.appcompat.widget.Toolbar
+    android:elevation="3dp"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back_icon"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whitecolor"
+        android:textStyle="bold"
+        android:textSize="23dp"
+        android:text="@string/availability"
+        />
+</androidx.appcompat.widget.Toolbar>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="18dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="5dp"
+            android:background="#fff6f1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackcolor"
+            android:layout_gravity="center_vertical"
+            android:textSize="18dp"
+            android:text="@string/select_the_genre"
+            />
+            <Button
+                android:id="@+id/avaibility_clear_all"
+                android:enabled="true"
+                android:layout_centerInParent="true"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:layout_marginRight="2dp"
+                android:layout_alignParentRight="true"
+                android:text="Tout effacer"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            </RelativeLayout>
+            <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:checked="true"
+                android:buttonTint="@color/colorPrimary"
+                android:id="@+id/radio_Quo"
+                android:layout_weight="1"
+                android:text="@string/daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:buttonTint="@color/colorPrimary"
+                android:checked="false"
+                android:id="@+id/radio_Heb"
+                android:layout_weight="1"
+                android:text="@string/weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:id="@+id/Quo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackcolor"
+                android:layout_gravity="center_vertical"
+                android:textSize="18dp"
+                android:text="@string/select_the_week"
+                />
+            <!--<Spinner-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/week_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:dropDownWidth="300dp"-->
+            <!--android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"-->
+            <!--android:paddingRight="14dp"-->
+            <!--android:popupBackground="@android:color/white"-->
+            <!--android:popupElevation="3dp"-->
+            <!--/>-->
+
+            <!--android:background="@drawable/spinner_bg"-->
+            <!--android:stateListAnimator="@animator/spinner_sla"-->
+
+            <com.tech.cloudnausor.ohmytennispro.utils.MyAutoCompleteTextView
+                android:textColor="#000000"
+                android:drawableRight="@drawable/ic_spinner_arrow_down_black_24dp"
+                android:drawablePadding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:focusable="false"
+                android:hint="Sélectionner"
+                android:layout_weight="1"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_view"
+                android:backgroundTint="@color/colorPrimary"/>
+            <!--<EditText-->
+            <!--android:focusable="false"-->
+            <!--android:hint="Sélectionner"-->
+            <!--android:backgroundTint="@color/colorPrimary"-->
+            <!--android:drawableTint="@color/colorPrimary"-->
+            <!---->
+            <!--android:textColor="@color/blackcolor"-->
+            <!--android:drawableRight="@android:drawable/arrow_down_float"-->
+            <!--android:textColorHint="@color/hintcolor"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:visibility="visible"
+            android:id="@+id/heb"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:drawableRight="@drawable/ic_spinner_arrow_down_black_24dp"
+                android:drawableLeft="@drawable/ic_date_black_24dp"
+                android:focusable="false"
+                android:textSize="12sp"
+                android:id="@+id/from_date"
+                android:hint="  De"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableTint="@color/colorPrimary"
+
+                android:textColor="@color/blackcolor"
+                android:textColorHint="@color/hintcolor"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:drawableRight="@drawable/ic_spinner_arrow_down_black_24dp"
+                android:drawableLeft="@drawable/ic_date_black_24dp"
+                android:focusable="false"
+                android:textSize="12sp"
+                android:id="@+id/to_date"
+                android:hint="  A"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableTint="@color/colorPrimary"
+
+                android:textColor="@color/blackcolor"
+                android:textColorHint="@color/hintcolor"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/week_start_end"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/from_date_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" to "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/to_date_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/blackcolor"
+            android:textSize="18dp"
+            android:text="Sélectionner le jour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:enabled="false"
+            android:id="@+id/avaibility_sunday"
+            android:layout_weight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sunday"
+            />
+        <Button
+android:enabled="false"
+            android:id="@+id/avaibility_monday"
+            android:layout_weight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monday"
+            />
+
+        <Button
+android:enabled="false"
+            android:id="@+id/avaibility_tuesday"
+            android:layout_weight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuesday"
+            />
+
+        <Button
+android:enabled="false"
+            android:id="@+id/avaibility_wednesday"
+            android:layout_weight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wednesday"
+            />
+
+        <!--<Button
+android:enabled="false"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Button"-->
+            <!--android:layout_gravity="fill"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--/>-->
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+android:enabled="false"
+            android:id="@+id/avaibility_thursday"
+
+            android:backgroundTint="@color/whitecolor"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thursday"
+            />
+        <Button
+android:enabled="false"
+            android:id="@+id/avaibility_friday"
+
+            android:backgroundTint="@color/whitecolor"
+
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friday"
+            />
+
+        <Button
+android:enabled="false"
+            android:id="@+id/avaibility_saturday"
+            android:backgroundTint="@color/whitecolor"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saturday"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+    <GridLayout
+    android:visibility="gone"
+    android:columnCount="4"
+    android:gravity="center"
+    android:padding="5dp"
+    android:background="#fff6f1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <Button
+            android:enabled="false"
+            android:textColor="@color/blackcolor"
+            android:backgroundTint="@color/whitecolor"
+            android:layout_columnWeight="1"
+            android:text="Monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+             android:enabled="false"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/whitecolor"
+            android:text="Tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+android:enabled="false"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:text="Wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+android:enabled="false"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:text="Thusday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+android:enabled="false"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:text="Friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+android:enabled="false"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:text="saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+android:enabled="false"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/whitecolor"
+            android:text="Sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+</GridLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:textColor="@color/blackcolor"
+            android:textSize="18dp"
+            android:text="Sélectionner l'heure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+            <CheckBox
+                android:enabled="false"
+                android:id="@+id/avaibility_time_all"
+                android:visibility="visible"
+                android:textStyle="bold"
+                android:buttonTint="@color/colorGoogleGreen"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:text="Toute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_8to9"
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="8h à 9h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_9to10"
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="9h à 10h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_10to11"
+
+                android:textAllCaps="false"
+
+                android:textSize="13dp"
+                android:backgroundTint="@color/whitecolor"
+                android:text="10h à 11h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_11to12"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="11h à 12h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_12to13"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="12h à 13h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_13to14"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="13h à 14h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_14to15"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="14h à 15h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_15to16"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="15h à 16h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_16to17"
+
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="16h à 17h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_17to18"
+
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="17h à 18h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_18to19"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+
+                android:backgroundTint="@color/whitecolor"
+                android:text="18h à 19h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_19to20"
+
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="19h à 20h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_20to21"
+                android:textAllCaps="false"
+                android:textSize="13dp"
+                android:backgroundTint="@color/whitecolor"
+                android:text="20h à 21h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+android:enabled="false"
+                android:id="@+id/avaibility_time_21to22"
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/whitecolor"
+                android:text="21h à 22h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+        <CheckBox
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:buttonTint="@color/colorGoogleGreen"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Toute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/avaibility_main_cancel"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/whitecolor"
+            android:text="@string/cancel"
+            android:background="@drawable/cancelbutton"
+            />
+        <Button
+            android:id="@+id/avaibility_main_ok"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/whitecolor"
+            android:text="@string/okey"
+            android:background="@drawable/loginbutton"
+            />
+    </LinearLayout>
+    </LinearLayout>
+   </ScrollView>
+</LinearLayout>
